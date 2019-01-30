@@ -1,19 +1,12 @@
 ## Introduction
 
-Add project description here. What will learners be making?
+In this project, you'll use simple Classification and machine learning to find out which Harry Potter character you look like most!
 
 ### What you will make
 
---- no-print ---
-Add instructions for using the embedded content here.
-
-<div class="scratch-preview">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/160619869/?autostart=false" frameborder="0"></iframe>
-</div>
---- /no-print ---
 
 --- print-only ---
-![Complete project](images/showcase_static.png)
+![Complete project](images/Complete.png)
 --- /print-only ---
 
 --- collapse ---
@@ -22,13 +15,13 @@ title: What you will need
 ---
 ### Hardware
 
-+ Describe hardware here
++ Either a computer or a Raspberry Pi
++ You have the option to use a camera (built or external)
 
 ### Software
 
-+ Scratch 2.0 (either [online](http://rpf.io/scratchon) or [offline](http://rpf.io/scratchoff))
-+ Python 3
-+ This project can be completed in a web browser using [trinket.io](https://trinket.io/)
++ Wolfram Language
++ This project can be completed in a web browser using [wolframcloud.com](http://lab.wolframcloud.com/app/). Log in, and click Create New Notebook.
 
 ### Downloads
 
@@ -41,8 +34,11 @@ title: What you will need
 title: What you will learn
 ---
 
-+ Two or three learning objectives
-+ ...should go here
++ Using `Classify` to build simple machine learning classifications
++ Using Wolfram to take photos
++ Using buttons and `Dynamic` to create interactivity
+
+If you have never used the Wolfram Language before, follow [this guide](https://projects.raspberrypi.org/en/projects/getting-started-with-mathematica). You'll need to look at Starting Mathematica and Programming in Mathematica.
 
 --- /collapse ---
 

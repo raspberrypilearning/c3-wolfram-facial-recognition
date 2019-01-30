@@ -1,11 +1,13 @@
-title: c3-wolfram-facial-recognition
+title: Flipping the Coins, Rolling the Dice
 hero_image: images/banner.png
-description: c3-wolfram-facial-recognition description
+description:
 version: 4
 listed: false
 copyedit: false
-last_tested: "2019-01-30"
+last_tested: "2018-12-06"
 steps:
   - title: Introduction
-  - title: Step title
-  - title: What next?
+  - title: Building a Classify Function
+  - title: Using Your Own Photos, With a Camera
+  - title: Using Your Own Photos, Without a Camera
+  - title: Building an Interface
