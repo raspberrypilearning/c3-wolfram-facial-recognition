@@ -36,7 +36,6 @@ Grid[{
     Style[Dynamic[probabilities], 14]], 
    Button["Turn Off Camera", DeviceClose[First[Devices["Camera"]]]]}},
   Frame -> True, FrameStyle -> Thick]
-
 ```
 
 If you are importing a file:

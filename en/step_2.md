@@ -58,18 +58,13 @@ You can classify an image by copy/pasting an image into your notebook and callin
 ![Testing potter classifier](images/callPotter.png)
 
 --- task ---
-Test your `potter` classifier by running several images through it in a list. You should get the classification for each image as the output.
+Go onto the internet and find two photos each of Harry, Ron, and Hermione. Try to find one when they were a child, and one as an adult.
+
+Test your `potter` classifier by the images you find through it in a list, `{}`. You should get the classification for each image as the output.
 
 In this code, replace `image1` by copy/pasting the first image, `image2` with the second image etc.
 
 `potter[{image1,image2,image3,image4,image5,image6}]`
-
-![testimage1](images/testimage1.png)
-![testimage2](images/testimage2.png)
-![testimage3](images/testimage3.png)
-![testimage4](images/testimage4.png)
-![testimage5](images/testimage5.png)
-![testimage6](images/testimage6.png)
 
 --- /task ---
 
@@ -79,6 +74,8 @@ Let's see what the function does when we ask it to classify a photo which is not
 
 ![New Character](images/nevillequeen.png)
 
+As you can see, the Classifier puts the image in to the most similar category.
+
 We can also see how sure the Classify function is by using `Probabilities`
 
-![New Character](images/probabilities.png)
+![Probabilities](images/probabilities.png)

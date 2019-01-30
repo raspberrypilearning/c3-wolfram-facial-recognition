@@ -4,7 +4,6 @@ In this project, you'll use simple Classification and machine learning to find o
 
 ### What you will make
 
-
 --- print-only ---
 ![Complete project](images/Complete.png)
 --- /print-only ---
@@ -23,10 +22,6 @@ title: What you will need
 + Wolfram Language
 + This project can be completed in a web browser using [wolframcloud.com](http://lab.wolframcloud.com/app/). Log in, and click Create New Notebook.
 
-### Downloads
-
-+ [rpf.io/project-name-go](http://rpf.io/project-name-go){:target="_blank"}
-
 --- /collapse ---
 
 --- collapse ---
@@ -38,7 +33,7 @@ title: What you will learn
 + Using Wolfram to take photos
 + Using buttons and `Dynamic` to create interactivity
 
-If you have never used the Wolfram Language before, follow [this guide](https://projects.raspberrypi.org/en/projects/getting-started-with-mathematica). You'll need to look at Starting Mathematica and Programming in Mathematica.
+If you have never used the Wolfram Language before, follow [this guide](https://projects.raspberrypi.org/en/projects/getting-started-with-mathematica). You'll need to look at Starting Mathematica and Programming in Mathematica. If you are using the web browser version of Wolfram, you only need to look at Programming in Mathematica.
 
 --- /collapse ---
 
