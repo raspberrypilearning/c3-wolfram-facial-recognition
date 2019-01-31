@@ -6,30 +6,29 @@ The Wolfram Language can handle a lot of image processing tasks for us, so we do
 Let's look at how the Classify function works.
 First, we need to associate a label to a value.
 
-```exampletrainingdata = {1 -> "A", 2 -> "A", 3.5 -> "B", 4 -> "B"};```
+![Example Training Data](images/exampletrainingdata.png)
 
-If we look at this training data, we can see that 1 and 2 both fit into the category "A", and that 3.5 and 4 both fit into the category "B".
-But we can't tell what category 2.5 or 6 fall into. Classify helps us to make a good guess. Let's train a Classify Function on this training data.
+If we look at this training data, we can see that the colour red fits into the category `"Red"`, and the colour blue fits into the category `"Blue"`
+But we can't tell what category orange falls into, because we haven't told the computer that information. `Classify` helps us to make a good guess. Let's train a Classify Function on this training data.
 
 ``` classified = Classify[exampletrainingdata]```
 
 When you evaluate `classified`, after waiting a few seconds, you should get a `ClassifierFunction`.
 
-![Example Classifier Function](images/exampleClassifierFunction.png)
+![Example Classifier Function](images/exampleclassifierfunction.png)
 
-The `ClassifierFunction` has categories (Classes) A and B. Let's see how good this Classify Function is at telling us which category a number should go in.
+The `ClassifierFunction` has categories (Classes) `"Red"` and `"Blue"`. Let's see how good this Classify Function is at telling us which category a new colour should go in.
 
-We know that the number 2 fits into category A. But what about numbers we've never told the classify function about?
+![Example Classifier Function Output](images/exampleclassifieroutput.png)
 
-![Example Classifier Function Output](images/exampleClassifierOutput.png)
+The classify function put the new colour into the category whose members most closely resembled the new colour.
 
-The classify function put the numbers into the category whose members most closely resembled the new number.
+Now that we know what a classify function is, we can apply it to our problem. Instead of colours, we are going to use images of Harry Potter, Hermionie Granger and Ron Weasley as data for our categories.
 
-Now that we know what a classify function is, we can apply it to our problem. Instead of numbers, we are going to use images of Harry Potter, Hermionie Granger and Ron Weasley as data for our categories.
-
-First, we need to find images of Harry, Ron and Hermione, so that we can train our Classifier to recognise their faces. We can do this by finding the URL to a Google image search, and then using Import to import the images.
+First, we need to find images of Harry, Ron and Hermione, so that we can train our `Classifier` to recognise their faces. We can do this by finding the URL to a Google image search, and then using Import to import the images.
 
 We will then train a classifier function on the images, putting them into three categories: "Harry", "Ron", and "Hermionie".
+
 --- task ---
 
 Create a `Classify` function called `potter` using Google Images search results for each main Harry Potter character.
@@ -53,16 +52,12 @@ This function will take some time to evaluate.
 
 Let's test the `Classifier` function with images it hasn't seen before.
 
-You can classify an image by copy/pasting an image into your notebook and calling `potter` with the image as a variable.
-
-![Testing potter classifier](images/callPotter.png)
-
 --- task ---
 Go onto the internet and find two photos each of Harry, Ron, and Hermione. Try to find one when they were a child, and one as an adult.
 
 Test your `potter` classifier by the images you find through it in a list, `{}`. You should get the classification for each image as the output.
 
-In this code, replace `image1` by copy/pasting the first image, `image2` with the second image etc.
+Classify the images by replaceing `image1` by copy/pasting the first image, `image2` with the second image etc.
 
 `potter[{image1,image2,image3,image4,image5,image6}]`
 
@@ -72,10 +67,12 @@ It looks like our Classifier is doing quite well. It recognises the characters e
 
 Let's see what the function does when we ask it to classify a photo which is not of one of the characters.
 
-![New Character](images/nevillequeen.png)
+![New Character](images/testsubjects.png)
 
 As you can see, the Classifier puts the image in to the most similar category.
 
-We can also see how sure the Classify function is by using `Probabilities`
+We can also see how sure the Classify function is by using `Probabilities`. This gives the probability that an image belongs to each class. In this case, there is an 89.5% probability that this image fits into the `Harry` class.
 
-![Probabilities](images/probabilities.png)
+![Probabilities](images/probability.png)
+
+

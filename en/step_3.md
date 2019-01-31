@@ -7,7 +7,7 @@ In order to take a picture, you can use the `CurrentImage` function.
 --- task ---
 Take a photo of yourself using your camera, and give it the variable name `image`
 
-`image = CurrentImage[ImageSize -> 350]`
+```image = CurrentImage[ImageSize -> 350]```
 
 --- /task ---
 
@@ -24,10 +24,6 @@ And use `"Probabilities"` to see how likely you are to be each character.
 
 --- /task ---
 
-In order to turn off the camera after you've taken a photo, you'll need to close the camera:
-
-``` DeviceClose[First[Devices["Camera"]]]```
-
 --- task ---
 Build a button which takes a photo and runs it through the classifier function.
 
@@ -35,10 +31,10 @@ Build a button which takes a photo and runs it through the classifier function.
 Button["New Photo",
 image = CurrentImage[ImageSize -> 350];
 character = potter[image];
-probabilities = Normal[potter[image, "Probabilities"]]]
- ```
- 
- Display the results using `Dynamic`
+probabilities = potter[image, "Probabilities"]]
+```
+
+Display the results using `Dynamic`
  
 ```
 Dynamic[image]
@@ -46,11 +42,3 @@ Dynamic[character]
 Dynamic[probabilities]
 ```
 --- /task ---
-
---- task---
-Make a button which turns off the camera.
-
-```
-Button["Turn Off my Camera", DeviceClose[First[Devices["Camera"]]]]
-```
----/task---

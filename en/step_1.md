@@ -5,7 +5,7 @@ In this project, you'll use simple Classification and machine learning to find o
 ### What you will make
 
 --- print-only ---
-![Complete project](images/Complete.png)
+![Complete project](images/complete.png)
 --- /print-only ---
 
 --- collapse ---
@@ -14,8 +14,8 @@ title: What you will need
 ---
 ### Hardware
 
-+ Either a computer or a Raspberry Pi
-+ You have the option to use a camera (built or external)
++ Either a desktop computer, laptop, or a Raspberry Pi
++ You have the option to use a camera (built-in or external)
 
 ### Software
 
@@ -29,7 +29,7 @@ title: What you will need
 title: What you will learn
 ---
 
-+ Using `Classify` to build simple machine learning classifications
++ Have the computer figure out the similarity between images
 + Using Wolfram to take photos
 + Using buttons and `Dynamic` to create interactivity
 
