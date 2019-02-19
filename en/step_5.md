@@ -23,35 +23,35 @@ Make a `Grid` with four rows.
 + If you are using a camera, the fourth row should have one item: the result of `"Probabilities"` from your `Classify` function.
 + If you are uploading a file, the fourth row should have two items: the result of `"Probabilities"` from your `Classify` function, and the button to import the file and classify the image.
 
-If you are using Wolfram in the desktop application, or on a Raspberry Pi, you can use `Frame` styling options to change how the frame looks.
+You can use `Framed` and `FrameStyle` to draw a frame around your tool.
 
 If you are using a camera:
 ```
-Grid[{
-  {Text[Style["Which Harry Potter Character Are You?", Bold, 
-     18]]}, {Dynamic[image]}, {Text[
-    Style[Dynamic[character], Bold, 18]], Button["New Photo",
-    image = CurrentImage[ImageSize -> 350];
-    character = potter[image];
-    probabilities = Normal[potter[image, "Probabilities"]]]}, {Text[
-    Style[Dynamic[probabilities], 14]]}},
-  Frame -> True, FrameStyle -> Thick]
+Framed[Grid[{
+{Text[Style["Which Harry Potter Character Are You?", Bold, 18]]},
+{Dynamic[image]},
+{Text[Style[Dynamic[character], Bold, 18]],
+Button["New Photo",
+image = CurrentImage[ImageSize -> 350];
+character = potter[image];
+probabilities = Normal[potter[image, "Probabilities"]]]},
+{Text[Style[Dynamic[probabilities], 14]]}}], FrameStyle -> Thick]
 ```
 
-If you are importing a file:
+If you are importing a file (not avaliable in the browser version of Wolfram):
 
 ```
-Grid[{
-  {Text[Style["Which Harry Potter Character Are You?", Bold, 
-     18]]}, {Dynamic[image]}, {Text[
-    Style[Dynamic[character], Bold, 18]], 
-   FileNameSetter[Dynamic[file], 
-    Appearance -> "Select New Image"]}, {Text[
-    Style[Dynamic[probabilities], 14]], Button["Classify Image",
-    image = Import[file];
-    character = potter[image];
-    probabilities = Normal[potter[image, "Probabilities"]]]}}, 
- Frame -> True, FrameStyle -> Thick]
+Framed[Grid[{
+{Text[Style["Which Harry Potter Character Are You?", Bold, 18]]},
+{Dynamic[image]},
+{Text[Style[Dynamic[character], Bold, 18]],
+FileNameSetter[Dynamic[file], Appearance -> "Select New Image"]},
+{Text[Style[Dynamic[probabilities], 14]],
+Button["Classify Image",
+image = Import[file];
+character = potter[image];
+probabilities = Normal[potter[image, "Probabilities"]]]}}],
+FrameStyle -> Thick]
  ```
 ---/task ---
 

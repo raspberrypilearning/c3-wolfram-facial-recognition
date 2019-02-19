@@ -5,6 +5,7 @@ The aim of this project is to be able to see which character the `Classify` func
 In order to take a picture, you can use the `CurrentImage` function.
 
 --- task ---
+
 Take a photo of yourself using your camera, and give it the variable name `image`
 
 ```image = CurrentImage[ImageSize -> 350]```
@@ -14,6 +15,7 @@ Take a photo of yourself using your camera, and give it the variable name `image
 We can then put this image through the Classify Function to see which character the function thinks you look like.
 
 --- task ---
+
 Run your photo through your classifier function to see which character you look most like.
 
 ```potter[image]```
@@ -25,6 +27,7 @@ And use `"Probabilities"` to see how likely you are to be each character.
 --- /task ---
 
 --- task ---
+
 Build a button which takes a photo and runs it through the classifier function.
 
 ```

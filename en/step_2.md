@@ -53,11 +53,12 @@ This function will take some time to evaluate.
 Let's test the `Classifier` function with images it hasn't seen before.
 
 --- task ---
+
 Go onto the internet and find two photos each of Harry, Ron, and Hermione. Try to find one when they were a child, and one as an adult.
 
 Test your `potter` classifier by the images you find through it in a list, `{}`. You should get the classification for each image as the output.
 
-Classify the images by replaceing `image1` by copy/pasting the first image, `image2` with the second image etc.
+Classify the images by replaceing `image1` by copy/pasting the first image, `image2` with the second image etc. (If you are using Wolfram in a browser, we recommend that you save images to your desktop and then drag and drop them into the notebook)
 
 `potter[{image1,image2,image3,image4,image5,image6}]`
 
