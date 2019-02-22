@@ -15,11 +15,11 @@ But we can't tell what category orange falls into, because we haven't told the c
 
 When you evaluate `classified`, after waiting a few seconds, you should get a `ClassifierFunction`.
 
-![Example Classifier Function](images/exampleclassifierfunction.png)
+![Example Classifier Function](images/exampleClassifierFunction.png)
 
 The `ClassifierFunction` has categories (Classes) `"Red"` and `"Blue"`. Let's see how good this Classify Function is at telling us which category a new colour should go in.
 
-![Example Classifier Function Output](images/exampleclassifieroutput.png)
+![Example Classifier Function Output](images/exampleClassifierOutput.png)
 
 The classify function put the new colour into the category whose members most closely resembled the new colour.
 
