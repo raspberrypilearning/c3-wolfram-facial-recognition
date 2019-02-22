@@ -55,4 +55,4 @@ FrameStyle -> Thick]
  ```
 ---/task ---
 
-![Interface](images/firstComplete.png)
+![Interface](images/firstcomplete.png)

@@ -5,7 +5,7 @@ In this project, you'll use simple Classification and machine learning to find o
 ### What you will make
 
 --- print-only ---
-![Complete project](images/complete.png)
+![Complete project](images/Complete.png)
 --- /print-only ---
 
 --- collapse ---
