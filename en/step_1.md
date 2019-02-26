@@ -4,9 +4,7 @@ In this project, you'll use simple Classification and machine learning to find o
 
 ### What you will make
 
---- print-only ---
 ![Complete project](images/Complete.png)
---- /print-only ---
 
 --- collapse ---
 ---
@@ -14,13 +12,11 @@ title: What you will need
 ---
 ### Hardware
 
-+ Either a desktop computer, laptop, or a Raspberry Pi
-+ You have the option to use a camera (built-in or external)
++ A computer: desktop, laptop, or a Raspberry Pi
 
 ### Software
 
-+ Wolfram Language
-+ This project can be completed in a web browser using [wolframcloud.com](http://lab.wolframcloud.com/app/). Log in, and click Create New Notebook.
++ Wolfram Language — this is available for free on the Raspberry Pi as part of NOOBS
 
 --- /collapse ---
 

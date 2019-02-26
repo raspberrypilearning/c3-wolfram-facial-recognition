@@ -1,6 +1,6 @@
 ## Building an Interface
 
-At this point, you have created either one, or two buttons. If you're using a camera, your button will take a photo. If you are not using a camera, one button will set the file path, and the other button will import the image.
+At this point, you have created either one or two buttons. If you're using a camera, your button will take a photo. If you are not using a camera, one button will set the file path, and the other button will import the image.
 
 Now that you have these buttons, which allow you to get your own image, either from your camera or from your computer, you can build an interface.
 
@@ -38,7 +38,7 @@ probabilities = Normal[potter[image, "Probabilities"]]]},
 {Text[Style[Dynamic[probabilities], 14]]}}], FrameStyle -> Thick]
 ```
 
-If you are importing a file (not avaliable in the browser version of Wolfram):
+If you are importing a file:
 
 ```
 Framed[Grid[{
