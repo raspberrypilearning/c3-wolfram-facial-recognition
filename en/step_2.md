@@ -7,28 +7,7 @@ If you have never used the Wolfram Language before, follow [this guide](https://
 We will be using the Classify function to put images of each character into buckets, depending on the features of the image.
 The Wolfram Language can handle a lot of image processing tasks for us, so we don't need to worry about that.
 
-Let's look at how the Classify function works: 
-
-
-  First, we need to associate a label to a value.
-
-![Example Training Data](images/exampletrainingdata.png)
-
-If we look at this training data, we can see that the colour red fits into the category `"Red"`, and the colour blue fits into the category `"Blue"`, but we can't tell what category orange falls into. This is because we haven't told the computer that information. `Classify` helps us teach the computer to make a good guess. Let's train a Classify Function on this training data.
-
-``` classified = Classify[exampletrainingdata]```
-
-When you evaluate `classified`, after waiting a few seconds, you should get a `ClassifierFunction`.
-
-![Example Classifier Function](images/exampleClassifierFunction.png)
-
-The `ClassifierFunction` has categories (Classes) `"Red"` and `"Blue"`. Let's see how good this Classify Function is at telling us which category a new colour should go in.
-
-![Example Classifier Function Output](images/exampleClassifierOutput.png)
-
-The classify function put the new colour into the category whose members most closely resembled the new colour.
-
-Now that we know what a classify function is, we can apply it to our problem. Instead of colours, we are going to use images of Harry Potter, Hermionie Granger and Ron Weasley as data for our categories.
+We are going to create a **classifier** that will learn to identify categories of images and then make a guess about which category a new image belongs in. We are going to use images of Harry Potter, Hermionie Granger and Ron Weasley as data for our categories.
 
 First, we need to find images of Harry, Ron and Hermione, so that we can train our `Classifier` to recognise their faces. We can do this by finding the URL to a Google image search, and then using Import to import the images.
 
@@ -52,6 +31,30 @@ emma+watson\"&tbm=isch", "Images"] |>]
 
 This function will take some time to evaluate.
 --- /task ---
+
+--- collapse ---
+---
+title: How does the classifier work?
+---
+First, we need to associate a label to a value.
+
+![Example Training Data](images/exampletrainingdata.png)
+
+If we look at this training data, we can see that the colour red fits into the category `"Red"`, and the colour blue fits into the category `"Blue"`, but we can't tell what category orange falls into. This is because we haven't told the computer that information. `Classify` helps us teach the computer to make a good guess. Let's train a Classify Function on this training data.
+
+``` classified = Classify[exampletrainingdata]```
+
+When you evaluate `classified`, after waiting a few seconds, you should get a `ClassifierFunction`.
+
+![Example Classifier Function](images/exampleClassifierFunction.png)
+
+The `ClassifierFunction` has categories (Classes) `"Red"` and `"Blue"`. Let's see how good this Classify Function is at telling us which category a new colour should go in.
+
+![Example Classifier Function Output](images/exampleClassifierOutput.png)
+
+The classify function put the new colour into the category whose members most closely resembled the new colour.
+
+--- /collapse ---
 
 Let's test the `Classifier` function with images it hasn't seen before.
 
