@@ -1,13 +1,12 @@
-## Building an Interface
+## Build an interface
 
-At this point, you have created either one or two buttons. If you're using a camera, your button will take a photo. If you are not using a camera, one button will set the file path, and the other button will import the image.
+At this point, you have either one or two buttons:
++ If you're using a camera, your button takes a photo
++ If you are not using a camera, one button sets the file path, and the other button imports00 the image
 
-Now that you have these buttons, which allow you to get your own image, either from your camera or from your computer, you can build an interface.
+Now use `Grid` to create a good-looking interface for the button(s).
 
-We can use `Grid` to create a good looking interface.
-
-We can construct this using `Grid`.
-Let's look at an basic example of `Grid`
+Here is a basic example of `Grid`.
 
 ![Grid](images/Grid.png)
 
@@ -18,14 +17,14 @@ Let's look at an basic example of `Grid`
 Make a `Grid` with four rows.
 
 + The first row should have a title. You can make text look the way you want using `Text` and `Style`.
-+ The second row should be the `Dynamic` image. This will either be the image from your camera, or the image you import using your buttons.
-+ The third row should have two items: the result of your `Classify` function, and your first button. The first button will be either `CurrentImage`, or `FileNameSetter`, depending on your method.
-+ If you are using a camera, the fourth row should have one item: the result of `"Probabilities"` from your `Classify` function.
-+ If you are uploading a file, the fourth row should have two items: the result of `"Probabilities"` from your `Classify` function, and the button to import the file and classify the image.
++ The second row should be the `Dynamic` image. This is either be the image from your camera, or the image you import using your buttons.
++ The third row should have two items: the result of your `Classify` function, and your first button. The first button is either `CurrentImage`, or `FileNameSetter`, depending on whether you have one or two buttons.
++ **If you are using a camera**, the fourth row should have one item: the result of `"Probabilities"` from your `Classify` function.
++ **If you are uploading an image**, the fourth row should have two items: the result of `"Probabilities"` from your `Classify` function, and the button to import the file and classify the image.
 
-You can use `Framed` and `FrameStyle` to draw a frame around your tool.
+You can use `Framed` and `FrameStyle` to draw a frame around the `Grid`.
 
-If you are using a camera:
+**If you are using a camera**, this is the code you need:
 ```
 Framed[Grid[{
 {Text[Style["Which Harry Potter Character Are You?", Bold, 18]]},
@@ -38,7 +37,7 @@ probabilities = Normal[potter[image, "Probabilities"]]]},
 {Text[Style[Dynamic[probabilities], 14]]}}], FrameStyle -> Thick]
 ```
 
-If you are importing a file:
+**If you are uploading an image**, this is the code you need:
 
 ```
 Framed[Grid[{

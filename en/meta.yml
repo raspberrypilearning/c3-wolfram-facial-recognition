@@ -7,7 +7,7 @@ copyedit: false
 last_tested: "2018-12-06"
 steps:
   - title: Introduction
-  - title: Building a Classify Function
-  - title: Using Your Own Photos, With a Camera
-  - title: Using Your Own Photos, Without a Camera
-  - title: Building an Interface
+  - title: Build a Classify function
+  - title: Use your own photos, with a camera
+  - title: Use your own photos, without a camera
+  - title: Build an interface

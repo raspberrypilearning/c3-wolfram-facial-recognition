@@ -1,6 +1,6 @@
 ## Introduction
 
-In this project, you'll use simple Classification and machine learning to find out which Harry Potter character you look like most!
+In this project, you'll use simple classification and machine learning to find out which _Harry Potter_ character you look like the most!
 
 ### What you will make
 
@@ -12,11 +12,11 @@ title: What you will need
 ---
 ### Hardware
 
-+ A computer: desktop, laptop, or a Raspberry Pi
++ A computer (desktop, laptop, or Raspberry Pi)
 
 ### Software
 
-+ Wolfram Language — this is available for free on the Raspberry Pi as part of NOOBS
++ Wolfram Language, available for free on the Raspberry Pi as part of the official operating system, Raspbian
 
 --- /collapse ---
 
@@ -25,11 +25,9 @@ title: What you will need
 title: What you will learn
 ---
 
-+ Have the computer figure out the similarity between images
-+ Using Wolfram to take photos
-+ Using buttons and `Dynamic` to create interactivity
-
-If you have never used the Wolfram Language before, follow [this guide](https://projects.raspberrypi.org/en/projects/getting-started-with-mathematica). You'll need to look at Starting Mathematica and Programming in Mathematica. If you are using the web browser version of Wolfram, you only need to look at Programming in Mathematica.
++ How to make your computer figure out the similarity between images
++ How to use Wolfram to take photos
++ How to use buttons and `Dynamic` to create interactivity
 
 --- /collapse ---
 

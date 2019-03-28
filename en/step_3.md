@@ -1,26 +1,28 @@
-## Using Your Own Photos, With a Camera
+## Use your own photos, with a camera
 
-The aim of this project is to be able to see which character the `Classify` function thinks you are.
+If you don't have a camera to hand, skip to the next step.
 
-In order to take a picture, you can use the `CurrentImage` function.
+Now see which character the `Classify` function thinks you look most similar to!
+
+To take a photo of yourself, you can use the `CurrentImage` function.
 
 --- task ---
 
-Take a photo of yourself using your camera, and give it the variable name `image`
+Take a photo of yourself using your camera, and give the photo the variable name `image`.
 
 ```image = CurrentImage[ImageSize -> 350]```
 
 --- /task ---
 
-We can then put this image through the Classify Function to see which character the function thinks you look like.
+Then put this photo through the `Classify` function.
 
 --- task ---
 
-Run your photo through your classifier function to see which character you look most like.
+Run your photo through the `potter` classifier.
 
 ```potter[image]```
 
-And use `"Probabilities"` to see how likely you are to be each character.
+And use `"Probabilities"` to see how similar you look to each character.
 
 ```potter[image, "Probabilities"]```
 
@@ -28,7 +30,7 @@ And use `"Probabilities"` to see how likely you are to be each character.
 
 --- task ---
 
-Build a button which takes a photo and runs it through the classifier function.
+Build a button that takes a photo and runs it through the `potter` classifier.
 
 ```
 Button["New Photo",
@@ -37,7 +39,7 @@ character = potter[image];
 probabilities = potter[image, "Probabilities"]]
 ```
 
-Display the results using `Dynamic`
+Display the results using `Dynamic`.
  
 ```
 Dynamic[image]
