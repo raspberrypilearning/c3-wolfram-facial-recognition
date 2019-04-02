@@ -33,7 +33,7 @@ Run this function. It runs for a while, because it works with a lot of images.
 
 ### Online safety
 
-While working on this project, if you [accidentally discover an image you find upsetting](https://www.thinkuknow.co.uk/11_13/Need-advice/Things-you-see-online/){:target="_blank"}, close the program immediately and tell an adult.
+If you [discover an image online that you find upsetting](https://www.thinkuknow.co.uk/11_13/Need-advice/Things-you-see-online/){:target="_blank"}, close the browser immediately and tell an adult what happened.
 
 --- collapse ---
 ---
