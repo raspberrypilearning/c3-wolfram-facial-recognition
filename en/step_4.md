@@ -37,23 +37,3 @@ And use `"Probabilities"` to see how similar you look to each character.
 ```potter[image, "Probabilities"]```
 
 --- /task ---
-
---- task ---
-
-Build a button that takes a photo and runs it through the `potter` classifier.
-
-```
-Button["New Photo",
-image = CurrentImage[ImageSize -> 350];
-character = potter[image];
-probabilities = potter[image, "Probabilities"]]
-```
-
-Display the results using `Dynamic`.
- 
-```
-Dynamic[image]
-Dynamic[character]
-Dynamic[probabilities]
-```
---- /task ---

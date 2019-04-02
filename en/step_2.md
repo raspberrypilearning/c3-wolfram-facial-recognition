@@ -31,6 +31,10 @@ emma+watson\"&tbm=isch", "Images"] |>]
 Run this function. It runs for a while, because it works with a lot of images.
 --- /task ---
 
+### Online safety
+
+While working on this project, if you [accidentally discover an image you find upsetting](https://www.thinkuknow.co.uk/11_13/Need-advice/Things-you-see-online/){:target="_blank"}, close the program immediately and tell an adult.
+
 --- collapse ---
 ---
 title: How does the classifier work?
@@ -89,8 +93,8 @@ Add two more characters to your classifier: Neville Longbottom, played by Matthe
 Look at the code of the `potter` classifier and see where the names of the characters and actors appear. In case you don't know them:
 
   + Harry Potter is played by Daniel Radcliffe
-  + Hermione Granger iss played by Emma Watson
-  + Ron Weasley iss played by Rupert Grint
+  + Hermione Granger is played by Emma Watson
+  + Ron Weasley is played by Rupert Grint
 
 These names are used in Google image searches for pictures of the characers. You need to do the same for the two new ones.
 --- /hint ---
