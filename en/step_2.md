@@ -1,41 +1,19 @@
-##  Building a Classify Function
+##  Build a Classify function
 
 --- task ---
-If you have never used the Wolfram Language before, follow [this guide](https://projects.raspberrypi.org/en/projects/getting-started-with-mathematica) to get started and learn to use the tool. You'll need to look at **Starting Mathematica** and **Programming in Mathematica**.
+If you have never used the Wolfram Language before, follow [this guide to get started](https://projects.raspberrypi.org/en/projects/getting-started-with-mathematica) and learn to use the tool. Look at the sections **Starting Mathematica** and **Programming in Mathematica**.
 --- /task ---
 
-We will be using the Classify function to put images of each character into buckets, depending on the features of the image.
-The Wolfram Language can handle a lot of image processing tasks for us, so we don't need to worry about that.
+You are going to create a **classifier** program that will learn to identify categories of images. The classifier will then be able to look at new images and guess which category they belong to. You're going to use images of Harry Potter, Hermione Granger, and Ron Weasley as data for the categories.
 
-Let's look at how the Classify function works: 
+You will use the `Classify` function to sort images of _Harry Potter_ characters depending on the features of the images.
 
+First, you need images of Harry, Ron, and Hermione so that you can train the classifier to recognise their faces. To do this, you need to get the URL to a Google image search and then use `Import` to import the images.
 
-  First, we need to associate a label to a value.
-
-![Example Training Data](images/exampletrainingdata.png)
-
-If we look at this training data, we can see that the colour red fits into the category `"Red"`, and the colour blue fits into the category `"Blue"`, but we can't tell what category orange falls into. This is because we haven't told the computer that information. `Classify` helps us teach the computer to make a good guess. Let's train a Classify Function on this training data.
-
-``` classified = Classify[exampletrainingdata]```
-
-When you evaluate `classified`, after waiting a few seconds, you should get a `ClassifierFunction`.
-
-![Example Classifier Function](images/exampleClassifierFunction.png)
-
-The `ClassifierFunction` has categories (Classes) `"Red"` and `"Blue"`. Let's see how good this Classify Function is at telling us which category a new colour should go in.
-
-![Example Classifier Function Output](images/exampleClassifierOutput.png)
-
-The classify function put the new colour into the category whose members most closely resembled the new colour.
-
-Now that we know what a classify function is, we can apply it to our problem. Instead of colours, we are going to use images of Harry Potter, Hermionie Granger and Ron Weasley as data for our categories.
-
-First, we need to find images of Harry, Ron and Hermione, so that we can train our `Classifier` to recognise their faces. We can do this by finding the URL to a Google image search, and then using Import to import the images.
-
-We will then train a classifier function on the images, putting them into three categories: "Harry", "Ron", and "Hermionie".
+Then train a classifier function on these images, so that it puts them into three categories: "Harry", "Ron", and "Hermione".
 
 --- task ---
-Create a `Classify` function called `potter` using Google Images search results for each main Harry Potter character.
+Create a `Classify` function called `potter` using Google image search results for each main Harry Potter character.
 
 ```
 potter = Classify[<|
@@ -50,30 +28,60 @@ Rubert+Grint\"&tbm=isch", "Images"],
 emma+watson\"&tbm=isch", "Images"] |>]
 ```
 
-This function will take some time to evaluate.
+Run this function. It runs for a while, because it works with a lot of images.
 --- /task ---
 
-Let's test the `Classifier` function with images it hasn't seen before.
+### Online safety
+
+If you [discover an image online that you find upsetting](https://www.thinkuknow.co.uk/11_13/Need-advice/Things-you-see-online/){:target="_blank"}, close the browser immediately and tell an adult what happened.
+
+--- collapse ---
+---
+title: How does the classifier work?
+---
+First, a classifier associates a label to a value.
+
+In the following example training data, the colour red fits into the category `"Red"`, and the colour blue fits into the category `"Blue"`.
+
+![Example Training Data](images/exampletrainingdata.png)
+
+But you don't know which category the colour orange falls into. This is because you  the computer doesn't have that information. Using `Classify`, you teach the computer to make a good guess.
+
+Run the following code to train a `Classify` function on this training data.
+
+``` classified = Classify[exampletrainingdata]```
+
+After waiting a few seconds, you should get a `ClassifierFunction`.
+
+![Example Classifier Function](images/exampleClassifierFunction.png)
+
+The `ClassifierFunction` has the categories (classes) `"Red"` and `"Blue"`. Now test how good this `Classify` function is at deciding which category a new colour should go in.
+
+![Example Classifier Function Output](images/exampleClassifierOutput.png)
+
+The `Classify` function puts the new colour into the category that contains the images that most closely resemble the new colour.
+
+--- /collapse ---
+
+Now test the `potter` function with images it doesn't know.
 
 --- task ---
-Go onto the internet and find two photos each of Harry, Ron, and Hermione. Try to find one when they were a child, and one as an adult.
+Find two photos each of Harry, Ron, and Hermione. Ideally, one of the two images should show the character when they are young, and the other should show them when they are older.
 
-Test your `potter` classifier by the images you find through it in a list, `{}`. You should get the classification for each image as the output.
-
-Classify the images by replaceing `image1` by copy/pasting the first image, `image2` with the second image etc. (If you are using Wolfram in a browser, we recommend that you save images to your desktop and then drag and drop them into the notebook)
+Test your `potter` classifier with the images by replacing `image1` with the first image, `image2` with the second image, and so on. (If you are using Wolfram in a browser, save the images to your desktop and then drag and drop them into the notebook.)
 
 `potter[{image1,image2,image3,image4,image5,image6}]`
+
+You should get the classification for each image as the output.
 --- /task ---
 
-It looks like our Classifier is doing quite well. It recognises the characters even when they look younger or older, or have very different backgrounds. 
-
-Let's see what the function does when we ask it to classify a photo which is not of one of the characters.
+Now test what the function does when you give it a photo which is not of one of the characters.
 
 ![New Character](images/testsubjects.png)
 
-As you can see, the Classifier puts the image in to the most similar category.
+You should see that the classifier puts the image into the most similar category.
 
-We can also see how sure the Classify function is by using `Probabilities`. This gives the probability that an image belongs to each class. In this case, there is an 89.5% probability that this image fits into the `Harry` class.
+You can check how sure the `Classify` function is about its classification by using `Probabilities`. This gives the probability that an image fits into each class. In this case, there is an 89.5% probability that the image fits into the `Harry` class.
 
 ![Probabilities](images/probability.png)
 
@@ -82,21 +90,21 @@ Add two more characters to your classifier: Neville Longbottom, played by Matthe
 
 --- hints ---
 --- hint ---
-Look at the code you used to create the `potter` classifier, and see where the names of the characters and actors appear. In case you don't know them:
+Look at the code of the `potter` classifier and see where the names of the characters and actors appear. In case you don't know them:
 
-  + Harry Potter was played by Daniel Radcliffe
-  + Hermione Granger was played by Emma Watson
-  + Ron Weasley was played by Rupert Grint
+  + Harry Potter is played by Daniel Radcliffe
+  + Hermione Granger is played by Emma Watson
+  + Ron Weasley is played by Rupert Grint
 
-These names are used to create Google Image searches for pictures of those characers. You'll need to do the same for the two new ones.
+These names are used in Google image searches for pictures of the characers. You need to do the same for the two new ones.
 --- /hint ---
 --- hint ---
-You'll need to add two more lines to your classifier, changing the character and actor names to those for Neville and Luna.
+You need to add two more lines to your classifier, with the character and actor names for Neville and Luna.
 
-Notice that the last line is a bit different to the others.
+Notice that the last line of the `potter` classifier is a bit different to the other lines.
 --- /hint ---
 --- hint ---
-Here's the updated code, if you're stuck:
+Here's the code you need:
 ```
 potter = Classify[<|
    "Harry" -> 
