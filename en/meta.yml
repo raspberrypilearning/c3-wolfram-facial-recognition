@@ -2,8 +2,8 @@ title: Facial recognition
 hero_image: images/banner.png
 description:
 version: 4
-listed: false
-copyedit: false
+listed: true
+copyedit: true
 last_tested: "2018-12-06"
 steps:
   - title: Introduction
