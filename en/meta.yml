@@ -1,16 +1,18 @@
 ---
 title: Facial recognition
 hero_image: images/banner.png
-description:
+description: 
 version: 4
 listed: true
 copyedit: true
 last_tested: '2018-12-06'
 steps:
 - title: Introduction
-  completion: engaged
 - title: Build a Classify function
 - title: Use your own photos, with a camera
+  completion:
+  - engaged
 - title: Use your own photos, without a camera
-  completion: internal
 - title: Build an interface
+  completion:
+  - internal
